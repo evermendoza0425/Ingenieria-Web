@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pantalla de inicio - Restaurante</title>
+  <style>
+    /* Estilos CSS */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #d3d0d0;
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .restaurant-option {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    
+    .restaurant-option img {
+      width: 100px;
+      height: 100px;
+      margin-right: 20px;
+    }
+    
+    .restaurant-option h3 {
+      margin: 0;
+    }
+    
+    .search-input {
+      margin: 20px auto;
+      padding: 10px;
+      width: 300px;
+    }
+    
+    .new-restaurant-form {
+      display: none;
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    
+    .new-restaurant-form input {
+      margin-bottom: 10px;
+      padding: 5px;
+      width: 100%;
+    }
+    
+    .new-restaurant-form button {
+      padding: 5px 10px;
+    }
+    /* estilos para la barra de navegacion */
+    ul.nav {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    ul.nav li {
+      float: left;
+    }
+
+  </style>
+  <!-- Cargar botstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Cargar el archivo script.js -->
+  <script src="script.js"></script>
+</head>
+<body>
+  <!-- menu de opciones -->
+  <header>
+    <ul class="nav">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="new.html">Nuevo Restaurante</a></li>
+      <li><a href="search.html">Buscar</a></li>
+    </ul>
+  </header>
+  <div class="container">
+    <h1>Restaurantes VARI</h1>
+    <div class="content-restaurant-option"></div>
+  </div>
+  <script>
+    //ejecutar la funcion CargarRestaurantes() cuando la pagina se cargue
+    window.onload = CargarRestaurantes(restaurants);
+  </script>
+</body>
+</html>

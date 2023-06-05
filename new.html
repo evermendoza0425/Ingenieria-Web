@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Directorio de Restaurantes - Nuevo Restaurante</title>
+  <style>
+    /* estilos para la barra de navegacion */
+    ul.nav {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    ul.nav li {
+      float: left;
+    }
+  </style>
+  <!-- Cargar botstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Cargar el archivo script.js -->
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <ul class="nav">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="new.html">Nuevo Restaurante</a></li>
+      <li><a href="search.html">Buscar</a></li>
+    </ul>
+  </header>
+  <h1>Nuevo Restaurante</h1>
+  <form id="newRestaurantForm" class="new-restaurant-form">
+    <label for="name">Nombre</label>
+    <input type="text" id="name" placeholder="Nombre del restaurante" required>
+    <br>
+    <label for="description">Descripción</label>
+    <input type="text" id="description" placeholder="Descripción" required>
+    <br>
+    <label for="address">Dirección</label>
+    <input type="text" id="address" placeholder="Dirección" required>
+    <br>
+    <label for="image">Imagen</label>
+    <input type="text" id="image" placeholder="URL de la imagen" required>
+    <br>
+    <button type="button" onclick="addRestaurant()">Agregar Restaurante</button>
+  </form>
+  <!-- Tabla con los restarantes Creados-->
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Dirección</th>
+        <th>Descripción</th>
+        <th>Imagen</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    </tbody>
+    <script>
+      //llamar la funcion CargarRestaurantesTable() cuando la pagina se cargue
+      window.onload = CargarRestaurantesTable(restaurants);
+    </script>
+</body>
+</html>

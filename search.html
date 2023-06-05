@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Directorio de Restaurantes - Búsqueda</title>
+  <style>
+    /* estilos para la barra de navegacion */
+    ul.nav {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    ul.nav li {
+      float: left;
+    }
+  </style>
+  <!-- Cargar botstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Cargar el archivo script.js -->
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <ul class="nav">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="new.html">Nuevo Restaurante</a></li>
+      <li><a href="search.html">Buscar</a></li>
+    </ul>
+  </header>
+  <h3>Buscar Restaurantes</h3>
+  
+  <form id="search-form">
+    <input type="text" id="textSearchRestaurant" placeholder="Nombre del restaurante">
+    <button type="button" onclick="searchRestaurant()">Buscar Restaurante</button>
+  </form>
+  
+  <div id="search-results">
+    <!-- Tabla con los Restaurantes -->
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Dirección</th>
+          <th>Descripción</th>
+          <th>Imagen</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+  </div>
+</body>
+</html>
